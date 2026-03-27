@@ -19,9 +19,6 @@ public class UserResource {
 	@Autowired
 	private UserService service;
 	
-	public UserResource(UserService service) {
-        this.service = service;
-    }
 	@GetMapping
 	public ResponseEntity<List<User>> findAll() {
 		List<User> list = service.findAll();
